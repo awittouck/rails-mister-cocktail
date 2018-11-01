@@ -1,0 +1,9 @@
+<h1>Tadaaaaaaa</h1>
+<h2><%= @cocktail.name %></h2>
+<%= simple_form_for([@cocktail, @dose]) do |c| %>
+<%= c.input :description %>
+<%= c.association :company %>
+<%= c.submit "Plic Ploc", class: "btn btn-danger" %>
+<% end %>
+
+<%= link_to 'Home', cocktails_path , class:'btn btn-primary'%>
