@@ -1,8 +1,8 @@
 <h1>Tadaaaaaaa</h1>
-<h2><%= @cocktail.name %></h2>
+<h2> <%= @cocktail.name %> </h2>
 <%= simple_form_for([@cocktail, @dose]) do |c| %>
 <%= c.input :description %>
-<%= c.association :company %>
+<%= c.association :ingredient %>
 <%= c.submit "Plic Ploc", class: "btn btn-danger" %>
 <% end %>
 
