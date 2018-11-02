@@ -1,5 +1,20 @@
-<h1>Cocktails Menu 🍸</h1>
-<% @cocktails.each do |c| %>
-  <li><%= c.name %>  <%= link_to "See composition", cocktail_path(c)  %> </li>
-<% end %>
-<%= link_to "Let's make a new deligthful cocktail", new_cocktail_path(@cocktail), class: "btn btn-danger btn-xs" %>
+<div class="banner" style="background-image: url('https://images.pexels.com/photos/715995/pexels-photo-715995.jpeg?cs=srgb&dl=ashtray-black-background-bottle-715995.jpg&fm=jpg');">
+  <div class="banner-content">
+
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="text-left">
+        <div class="row">
+          <h1>Cocktails Menu</h1>
+          <% @cocktails.each do |c| %>
+          <li><%= c.name %>  <%= link_to "🍸", cocktail_path(c)  %> </li>
+          <% end %>
+        </div>
+        <div class="row">
+          <%= link_to "Let's make a new deligthful cocktail", new_cocktail_path(@cocktail), class: "btn-medium btn-xs" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
